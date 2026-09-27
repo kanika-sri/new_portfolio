@@ -5,29 +5,33 @@ function Hero() {
   const visualRef = useRef(null);
 
   useEffect(() => {
-    const hero = heroRef.current;
-    const visual = visualRef.current;
+  const hero = heroRef.current;
+  const visual = visualRef.current;
 
-    if (!hero || !visual) return;
+  if (!hero || !visual) return;
 
-    const move = (e) => {
-      const x = e.clientX / window.innerWidth - 0.5;
-      const y = e.clientY / window.innerHeight - 0.5;
+  const move = (e) => {
+    if (window.innerWidth <= 700) return;
 
-      hero.style.setProperty("--mx", `${e.clientX}px`);
-      hero.style.setProperty("--my", `${e.clientY}px`);
+    const x = e.clientX / window.innerWidth - 0.5;
+    const y = e.clientY / window.innerHeight - 0.5;
 
-      visual.style.transform = `
-        translate3d(${x * 35}px, ${y * 35}px, 0)
-        rotateX(${-y * 8}deg)
-        rotateY(${x * 10}deg)
-      `;
-    };
+    hero.style.setProperty("--mx", `${e.clientX}px`);
+    hero.style.setProperty("--my", `${e.clientY}px`);
 
-    window.addEventListener("mousemove", move);
+    visual.style.transform = `
+      translate3d(${x * 35}px, ${y * 35}px, 0)
+      rotateX(${-y * 8}deg)
+      rotateY(${x * 10}deg)
+    `;
+  };
 
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
+  window.addEventListener("mousemove", move);
+
+  return () => {
+    window.removeEventListener("mousemove", move);
+  };
+}, []);
 
   return (
     <section className="hero" ref={heroRef}>

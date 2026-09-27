@@ -1611,6 +1611,807 @@ footer {
 }
 
 
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .hero-visual {
+    right: -100px;
+    opacity: 0.5;
+  }
+
+  .hero-info {
+    margin-left: 0;
+  }
+
+  .about-grid,
+  .projects-heading,
+  .project-body,
+  .project-body.reverse,
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-body.reverse .project-art,
+  .project-body.reverse .project-info {
+    order: initial;
+  }
+
+  .project-art {
+    min-height: 420px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 25px 30px;
+  }
+
+  .hero-main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .hero-heading {
+    font-size: clamp(75px, 15vw, 140px);
+  }
+
+  .hero-info {
+    margin-left: 0;
+    gap: 40px;
+  }
+
+  .hero-visual {
+    right: -120px;
+    top: 32%;
+    opacity: 0.35;
+  }
+
+  .about-grid,
+  .experience-layout {
+    gap: 60px;
+  }
+
+  .projects-heading {
+    gap: 50px;
+  }
+
+  .project-body,
+  .project-body.reverse {
+    gap: 50px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  /* ---------- GLOBAL ---------- */
+
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .section {
+    min-height: auto;
+    padding: 90px 20px;
+  }
+
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar {
+    padding: 22px 20px;
+    min-height: 70px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .logo span {
+    font-size: 8px;
+  }
+
+  .nav-middle {
+    display: none;
+  }
+
+  .nav-contact {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .nav-contact span {
+    font-size: 11px;
+    margin-left: 5px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    min-height: 100svh;
+    height: auto;
+    min-height: 780px;
+
+    overflow: hidden;
+  }
+
+  .hero::before {
+    background-size: 55px 55px;
+    opacity: 0.5;
+  }
+
+  .hero-light {
+    width: 300px;
+    height: 300px;
+
+    left: 70%;
+    top: 48%;
+
+    filter: blur(25px);
+  }
+
+  .hero-main {
+    padding: 100px 20px 130px;
+  }
+
+  .hero-meta {
+    gap: 18px;
+    margin-bottom: 28px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+
+  /* ---------- HERO TITLE ---------- */
+
+  .hero-heading {
+    width: 100%;
+
+    font-size: clamp(62px, 20vw, 105px);
+
+    line-height: 0.8;
+
+    letter-spacing: -0.085em;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  .heading-line {
+    white-space: nowrap;
+  }
+
+  .heading-line.outline {
+    -webkit-text-stroke: 0.8px #666;
+  }
+
+
+  /* ---------- HERO INFO ---------- */
+
+  .hero-info {
+    position: relative;
+    z-index: 15;
+
+    margin-left: 0;
+    margin-top: 45px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 28px;
+  }
+
+  .hero-info p {
+    font-size: 8px;
+    line-height: 1.8;
+    letter-spacing: 1.3px;
+  }
+
+  .hero-cta {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+  .main-btn {
+    width: auto;
+
+    padding: 16px 19px;
+
+    font-size: 7px;
+    letter-spacing: 1.7px;
+  }
+
+  .main-btn span {
+    font-size: 13px;
+  }
+
+  .text-btn {
+    font-size: 7px;
+    letter-spacing: 1.7px;
+  }
+
+
+  /* ---------- HERO 3D VISUAL ---------- */
+
+  .hero-visual {
+    width: 250px;
+    height: 250px;
+
+    right: -75px;
+    top: 52%;
+
+    opacity: 0.28;
+
+    pointer-events: none;
+
+    transform: none !important;
+  }
+
+  .sphere {
+    width: 160px;
+    height: 160px;
+  }
+
+  .sphere-highlight {
+    width: 45px;
+    height: 20px;
+
+    left: 30px;
+    top: 25px;
+  }
+
+  .orbit-a {
+    width: 225px;
+    height: 80px;
+  }
+
+  .orbit-b {
+    width: 205px;
+    height: 205px;
+  }
+
+  .horizontal {
+    height: 30px;
+  }
+
+  .h1 {
+    top: 15px;
+  }
+
+  .h2 {
+    top: 45px;
+  }
+
+  .h3 {
+    top: 75px;
+  }
+
+  .h4 {
+    top: 105px;
+  }
+
+  .vertical {
+    width: 40px;
+  }
+
+  .v1 {
+    left: 30px;
+  }
+
+  .v2 {
+    left: 60px;
+  }
+
+  .v3 {
+    left: 90px;
+  }
+
+  .visual-label {
+    display: none;
+  }
+
+
+  /* ---------- HERO FOOTER ---------- */
+
+  .hero-footer {
+    left: 20px;
+    right: 20px;
+    bottom: 22px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    font-size: 6px;
+    letter-spacing: 1.5px;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .location {
+    text-align: left;
+  }
+
+  .hero-index {
+    text-align: right;
+  }
+
+
+  /* ---------- SECTION HEADER ---------- */
+
+  .section-top {
+    margin-bottom: 55px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-grid {
+    display: block;
+  }
+
+  .about-grid h2,
+  .projects-heading h2,
+  .experience-layout h2,
+  .section-heading {
+
+    font-size: clamp(52px, 15.5vw, 90px);
+
+    line-height: 0.82;
+
+    letter-spacing: -0.075em;
+  }
+
+  .about-copy {
+    padding-top: 45px;
+  }
+
+  .large-copy {
+    font-size: 17px;
+
+    line-height: 1.55;
+
+    margin-bottom: 30px;
+  }
+
+  .about-copy > p:not(.large-copy) {
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .about-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 28px;
+
+    margin-top: 50px;
+
+    padding-top: 22px;
+  }
+
+  .about-details div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .about-details span {
+    font-size: 6px;
+  }
+
+  .about-details strong {
+    font-size: 12px;
+  }
+
+
+  /* ---------- SKILLS ---------- */
+
+  .section-heading {
+    margin-bottom: 60px;
+  }
+
+  .skill-row {
+    min-height: 90px;
+
+    grid-template-columns: 30px 1fr 25px;
+
+    gap: 10px;
+
+    padding: 0;
+  }
+
+  .skill-row:hover {
+    padding-left: 0;
+    background: transparent;
+  }
+
+  .skill-row > span {
+    font-size: 7px;
+  }
+
+  .skill-row h3 {
+    font-size: 21px;
+
+    letter-spacing: -0.04em;
+  }
+
+  .skill-row p {
+    display: none;
+  }
+
+  .skill-row b {
+    font-size: 18px;
+  }
+
+
+  /* ---------- PROJECTS ---------- */
+
+  .projects-heading {
+    display: block;
+
+    margin-bottom: 70px;
+  }
+
+  .projects-heading p {
+    margin-top: 35px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .project-stack {
+    gap: 75px;
+  }
+
+  .project {
+    padding-top: 20px;
+  }
+
+  .project-top {
+    margin-bottom: 25px;
+
+    font-size: 6px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .project-top span:last-child {
+    text-align: right;
+  }
+
+  .project-body,
+  .project-body.reverse {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+  }
+
+  .project-body.reverse .project-art,
+  .project-body.reverse .project-info {
+    order: initial;
+  }
+
+
+  /* ---------- PROJECT ART ---------- */
+
+  .project-art {
+    width: 100%;
+
+    min-height: 300px;
+
+    padding: 20px;
+  }
+
+  .art-circle {
+    width: 210px;
+    height: 210px;
+  }
+
+  .art-text {
+    font-size: 60px;
+  }
+
+  .project-art > span {
+    font-size: 6px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* ---------- PROJECT INFO ---------- */
+
+  .project-info {
+    width: 100%;
+  }
+
+  .project-info h3 {
+    font-size: clamp(48px, 14vw, 65px);
+
+    line-height: 0.82;
+  }
+
+  .project-info > p {
+    margin-top: 28px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .tags {
+    gap: 6px;
+
+    margin-top: 28px;
+  }
+
+  .tags span {
+    padding: 8px 10px;
+
+    font-size: 6px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .project-link {
+    margin-top: 32px;
+
+    gap: 20px;
+
+    font-size: 7px;
+  }
+
+
+  /* ---------- CIVIC MAP ---------- */
+
+  .map-grid {
+    background-size: 32px 32px;
+  }
+
+  .map-point {
+    width: 8px;
+    height: 8px;
+  }
+
+
+  /* ---------- EXPERIENCE ---------- */
+
+  .experience-layout {
+    display: block;
+  }
+
+  .experience-layout h2 {
+    margin-bottom: 65px;
+  }
+
+  .experience-item {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding-top: 20px;
+  }
+
+  .exp-year {
+    font-size: 8px;
+  }
+
+  .exp-company {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .experience-item h3 {
+    margin-top: 20px;
+
+    font-size: clamp(38px, 11vw, 52px);
+
+    line-height: 0.85;
+  }
+
+  .exp-description {
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact {
+    min-height: 100svh;
+
+    padding: 100px 20px 120px;
+
+    justify-content: center;
+  }
+
+  .contact-number {
+    top: 30px;
+    left: 20px;
+
+    font-size: 7px;
+  }
+
+  .contact-content > p {
+    margin-bottom: 25px;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+  }
+
+  .contact-content h2 {
+    font-size: clamp(52px, 15.5vw, 90px);
+
+    line-height: 0.8;
+
+    letter-spacing: -0.08em;
+  }
+
+  .contact-content h2 span {
+    -webkit-text-stroke: 0.8px #777;
+  }
+
+  .contact-btn {
+    margin-top: 45px;
+
+    padding: 17px 18px;
+
+    gap: 25px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .contact-btn span {
+    font-size: 14px;
+  }
+
+  .contact::before {
+    font-size: 80vw;
+
+    right: -10vw;
+
+    bottom: -5vw;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    left: 20px;
+    right: 20px;
+    bottom: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    font-size: 6px;
+
+    line-height: 1.8;
+  }
+
+  footer span:nth-child(2) {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .hero {
+    min-height: 750px;
+  }
+
+  .hero-main {
+    padding-top: 90px;
+  }
+
+  .hero-heading {
+    font-size: 61px;
+  }
+
+  .hero-info {
+    margin-top: 38px;
+  }
+
+  .hero-visual {
+    right: -100px;
+    top: 51%;
+    opacity: 0.22;
+  }
+
+  .about-grid h2,
+  .projects-heading h2,
+  .experience-layout h2,
+  .section-heading {
+    font-size: 50px;
+  }
+
+  .project-art {
+    min-height: 270px;
+  }
+
+  .art-circle {
+    width: 185px;
+    height: 185px;
+  }
+
+  .project-info h3 {
+    font-size: 47px;
+  }
+
+  .experience-item h3 {
+    font-size: 37px;
+  }
+
+  .contact-content h2 {
+    font-size: 50px;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
 @media (prefers-reduced-motion: reduce) {
 
   *,
