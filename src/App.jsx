@@ -186,9 +186,15 @@ function App() {
                   <span>AI</span>
                 </div>
 
-                <a href="#contact" className="project-link">
-                  VIEW PROJECT <span>↗</span>
-                </a>
+                <a
+  href="https://investment-wzg8.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project-link"
+>
+  VIEW PROJECT
+  <span>↗</span>
+</a>
 
               </div>
 
@@ -234,9 +240,15 @@ function App() {
                   <span>MYSQL</span>
                 </div>
 
-                <a href="#contact" className="project-link">
-                  VIEW PROJECT <span>↗</span>
-                </a>
+                <a
+  href="https://citizen-issue-dashboard.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project-link"
+>
+  VIEW PROJECT
+  <span>↗</span>
+</a>
 
               </div>
 
